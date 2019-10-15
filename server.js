@@ -1,11 +1,12 @@
 const express = require('express');
 const UsersRouter = require('./users/users-router')
-const server = express();
 
 const session = require('express-session') //import experess-session
 const KnexSessionStore = require('connect-session-knex')(session);
 
 const knexConfig = require('./data/db-config')
+
+const server = express();
 
 //session object
 const sessionConfig = {
